@@ -52,7 +52,7 @@ export default function Home() {
         </motion.div>
 
         <h1 className="text-[52px] sm:text-[64px] font-bold text-apple-text tracking-tight leading-[1.05] mb-4">
-          每個 PDF 問題，
+          每個 PDF 問題
           <br />
           <span className="bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
             都有完美解答
