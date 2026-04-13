@@ -101,7 +101,7 @@ export default function Home() {
               >
                 <Link
                   to={`/${tool.id}`}
-                  className="block bg-white rounded-apple shadow-apple-card hover:shadow-apple-card-hover transition-shadow duration-300 p-5 no-underline group overflow-hidden relative"
+                  className="flex flex-col bg-white rounded-apple shadow-apple-card hover:shadow-apple-card-hover transition-shadow duration-300 p-5 no-underline group overflow-hidden relative h-[148px]"
                 >
                   {/* Background gradient shimmer */}
                   <div
@@ -113,7 +113,7 @@ export default function Home() {
 
                   {/* Icon */}
                   <div
-                    className="w-11 h-11 rounded-[12px] flex items-center justify-center mb-3.5 text-white text-[18px] font-bold shadow-apple-sm relative"
+                    className="w-11 h-11 rounded-[12px] flex items-center justify-center mb-3 text-white text-[18px] font-bold shadow-apple-sm relative flex-shrink-0"
                     style={{
                       background: `linear-gradient(135deg, ${tool.color}ee, ${tool.color}bb)`,
                     }}
@@ -122,10 +122,10 @@ export default function Home() {
                   </div>
 
                   {/* Text */}
-                  <h3 className="text-apple-text font-semibold text-[14px] leading-tight mb-1.5 relative">
+                  <h3 className="text-apple-text font-semibold text-[13px] leading-tight mb-1 relative line-clamp-1">
                     {tool.name}
                   </h3>
-                  <p className="text-apple-secondary text-[12px] leading-relaxed line-clamp-2 relative">
+                  <p className="text-apple-secondary text-[11px] leading-relaxed line-clamp-2 relative">
                     {tool.description}
                   </p>
                 </Link>
@@ -144,11 +144,11 @@ export default function Home() {
           安全第一，隱私保障
         </h2>
         <p className="text-apple-secondary text-[16px] max-w-md mx-auto mb-6">
-          所有 PDF 處理均在您的本機進行，
-          不需要網路連線，您的文件永遠不會離開您的裝置。
+          處理完成後檔案即刻刪除，不會永久儲存於伺服器。
+          所有工具完全免費，無需註冊。
         </p>
         <div className="flex items-center justify-center gap-6 flex-wrap">
-          {['🔒 端對端加密', '💻 本機處理', '🚀 極速處理', '🆓 完全免費'].map(
+          {['🔒 安全傳輸', '🗑 處理後即刪除', '🚀 極速處理', '🆓 完全免費'].map(
             (item) => (
               <span key={item} className="text-[14px] text-apple-secondary font-medium">
                 {item}

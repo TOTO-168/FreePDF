@@ -291,7 +291,7 @@ export default function ToolPage({ tool }: Props) {
             <h3 className="text-[13px] font-semibold text-apple-text mb-3">關於此工具</h3>
             <div className="space-y-2.5">
               {[
-                { icon: '🔒', text: '本機處理，檔案不上傳' },
+                { icon: '🔒', text: '安全傳輸，處理後即刪除' },
                 { icon: '⚡', text: '極速處理引擎' },
                 { icon: '🆓', text: '完全免費使用' },
               ].map((item) => (

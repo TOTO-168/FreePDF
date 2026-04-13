@@ -73,7 +73,7 @@ export default function Layout({ children }: Props) {
             © 2024 FreePDF — 免費且安全的 PDF 工具箱
           </p>
           <p className="text-apple-secondary/60 text-[12px] mt-1">
-            所有檔案處理均在本機完成，不會上傳至任何伺服器
+            檔案經安全傳輸處理，完成後立即刪除，不會永久儲存
           </p>
         </div>
       </footer>
