@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --apple-bg: #F5F5F7;
+  --apple-surface: #FFFFFF;
+  --apple-blue: #0071E3;
+  --apple-text: #1D1D1F;
+  --apple-secondary: #86868B;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background-color: var(--apple-bg);
+  color: var(--apple-text);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text',
+    'Helvetica Neue', Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar - macOS style */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 100px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.32);
+  background-clip: content-box;
+}
+
+/* Glass morphism */
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Selection */
+::selection {
+  background: rgba(0, 113, 227, 0.18);
+  color: #0071E3;
+}
+
+/* Focus */
+*:focus-visible {
+  outline: 2px solid #0071E3;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-apple-blue text-white font-semibold px-6 py-2.5 rounded-full
+      hover:brightness-110 active:scale-95
+      transition-all duration-200 ease-out
+      shadow-apple-sm
+      cursor-pointer select-none text-sm;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-apple-text font-medium px-6 py-2.5 rounded-full
+      hover:bg-gray-50 active:scale-95
+      transition-all duration-200 ease-out
+      shadow-apple-sm
+      border border-apple-border
+      cursor-pointer select-none text-sm;
+  }
+
+  .card-apple {
+    @apply bg-white rounded-apple shadow-apple-card
+      hover:shadow-apple-card-hover
+      transition-all duration-300 ease-out;
+  }
+}

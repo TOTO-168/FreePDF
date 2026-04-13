@@ -1,0 +1,6 @@
+[build]
+buildCommand = "npm install && npm run build"
+watchPatterns = ["src/**"]
+
+[deploy]
+startCommand = "npx serve dist -p $PORT --single"

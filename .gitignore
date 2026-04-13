@@ -1,0 +1,22 @@
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.env.production
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+backend/__pycache__/
+backend/routers/__pycache__/
+.venv/
+venv/
+
+# OS
+.DS_Store
+*.DS_Store
+
+# Temp
+*.tmp
+*.log
